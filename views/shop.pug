@@ -1,0 +1,17 @@
+extends common/layout
+
+block layout-content
+    - let entries = Object.entries(winesByType);
+    .container
+        each wineDetails in entries
+            - let type = wineDetails[0]
+            - let wineBottles = wineDetails[1]
+            h2.py-4.text-center.mb-5.shop-h2= type
+            .row
+                each wine in wineBottles
+                    .col-md-4.mb-4
+                        .card
+                            img.card-img-top.card-img-custom(src=wine.imageURL, alt=wine.name)
+                            .card-body
+                                h5.card-title.card-title-responsive.shop-card-h5= wine.name
+                                p.card-text.shop-card-p Price: $#{wine.price} | Size: #{wine.size} ml

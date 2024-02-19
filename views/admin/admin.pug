@@ -1,0 +1,38 @@
+extends ../common/layout
+
+block layout-content
+    .container
+        h1.py-4 List Of Wines
+        div.d-flex.justify-content-end.mb-3
+            a.btn.btn-primary.btn-add(href="/add") Add New Wine
+        div.table-responsive
+            table.table.table-hover.table-bordered
+                thead
+                    tr.table-dark
+                        th #
+                        th Name
+                        th Type
+                        th Size
+                        th Price
+                        th Image
+                        th Actions
+                tbody
+                    each wine, index in listWine
+                        tr.table-warning
+                            td= index + 1
+                            td= wine.name 
+                            td= wine.type 
+                            td #{wine.size} (ml) 
+                            td #{wine.price} $
+                            td
+                                img(src= wine.imageURL, alt=wine.name, class="wine-image-table")
+                            td
+                                div.d-flex.gap-1
+                                    form(action="/update")
+                                        input(type="hidden", name="wineId", value=wine._id)
+                                        button.btn.btn-outline-warning(type="submit")
+                                            i.fas.fa-edit
+                                    form(action="/delete")
+                                        input(type="hidden", name="wineId", value=wine._id)
+                                        button.btn.btn-outline-danger(type="submit")
+                                            i.fas.fa-trash-alt

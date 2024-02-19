@@ -12,41 +12,42 @@ block layout-content
             .carousel-item.active
                 img(src="/img/slider1.jpg", alt="Two Women Holding a glass of White Wine", class="d-block w-100 carousel-image")
                 .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    h5.text-white.mb-3 Elevate your senses with our meticulously curated selection of wines, each bottle a testament to the harmony of nature and craftsmanship.
+                    h3.text-white.mb-3 Elevate your senses with our meticulously curated selection of wines, each bottle a testament to the harmony of nature and craftsmanship.
             .carousel-item
                 img(src="/img/slider2.jpg", alt="People Tossing Thier Clear Wine Glasses", class="d-block w-100 carousel-image")
                 .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    h5.text-white.mb-3 Embark on a sensory adventure with every glass, as our wines unveil layers of complexity and character, inviting you to savor the moment.
+                    h3.text-white.mb-3 Wine makes daily living easier, less hurried, with fewer tensions and more tolerance.
             .carousel-item
                 img(src="/img/slider3.jpg", alt="Focus on Vintage Wine Bottles", class="d-block w-100 carousel-image")
                 .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    h5.text-white.mb-3 Immerse yourself in the elegance of fine wine culture, where passion meets expertise to create moments of sheer indulgence and sophistication.
+                    h3.text-white.mb-3 Immerse yourself in the elegance of fine wine culture, where passion meets expertise to create moments of sheer indulgence and sophistication.
             .carousel-item
                 img(src="/img/slider4.jpg", alt="Wine Bottle On Black Table", class="d-block w-100 carousel-image")
                 .carousel-caption.d-flex.flex-column.align-items-center.justify-content-center.text-center
-                    h5.text-white.mb-3 Fourth slide label
+                    h3.text-white.mb-3 Age and glasses of wine should never be counted.
 
     // Our Best Wines
-    h2.text-center.my-4 Our Best Wines
+    h2.text-center.my-4.home-heading Our Best Wines
     div.text-center.best-wines-container.container
-        each wine in wines.slice(0, 3)
-            .col-md-4.mb-4
-                .card
-                    img.card-img-top(src=wine.imageURL, alt=wine.name, class="wine-image")
-                    .card-body.text-center
-                        h5.card-title.mt-3.mb-0= wine.name 
-                        p.card-text.text-muted.mb-1 #{wine.type} (#{wine.size} ml)
-                        h6.card-subtitle $#{wine.price}
+        .row
+            each wine in wines.slice(0, 3)
+                .col-md-4.mb-4
+                    .card
+                        img.card-img-top(src=wine.imageURL, alt=wine.name, class="wine-image")
+                        .card-body.text-center
+                            h5.card-title.mt-3.mb-0= wine.name 
+                            p.card-text.text-muted.mb-1 #{wine.type} (#{wine.size} ml)
+                            h6.card-subtitle $#{wine.price}
 
     // About Us
     .about-us-section.my-5
         .container
-            h2.text-center.mb-4 About Us
+            h2.text-center.mb-4.home-heading About Us
             .row.align-items-center
-                .col-md-6
+                .col-md-6.d-flex.justify-content-center
                     img.img-fluid(src="/img/about.jpg", alt="filling the wine glass with red wine.", class="about-image")
                 .col-md-6
                     .about-content
-                        p.text-muted.mb-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        p.text-muted.mb-3 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        p.text-muted.mb-3 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p.text-muted.mb-3 Welcome to MV Wines, where we craft high-quality, affordable wines for every moment that matters. We offer a diverse range of options to suit every taste preference.
+                        p.text-muted.mb-3 Our skilled winemakers spend a great deal of time in the vineyard, ensuring our grapes are at their peak for color, taste, and quality. We are committed to delivering superior quality wines at great value, while providing a positive experience to consumers.
+                        p.text-muted.mb-3 At MV Wines, we believe in preserving and enhancing the land for future generations to enjoy, adhering to sustainable practices that are environmentally sound, economically feasible, and socially equitable.

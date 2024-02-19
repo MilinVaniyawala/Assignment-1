@@ -1,0 +1,37 @@
+extends ../common/layout
+
+block layout-content
+    .container
+        h1.py-4 Add New Wine
+        form(action="/add/submit", method="POST")
+            .row.mb-3
+                .col-md-6
+                    label(for="name", class="form-label") Name
+                    input#name.form-control(type="text", name="name", placeholder="Enter wine name", required)
+                .col-md-6
+                    label(for="type", class="form-label") Type
+                    select#type.form-select(name="type", required)
+                        option(value="") -- Select wine type --
+                        option(value="Red Wine") Red Wine
+                        option(value="White Wine") White Wine
+                        option(value="Sake & Rice Wine") Sake & Rice Wine
+                        option(value="Rose Wine") Rose Wine
+            .row.mb-3
+                .col-md-6
+                    label(for="price", class="form-label") Price
+                    input#price.form-control(type="number", name="price", step="0.01", min="0", placeholder="Enter price (e.g., 25.99)", required)
+                .col-md-6
+                    label(for="size", class="form-label") Size (ml)
+                    select#size.form-select(name="size", required)
+                        option(value="") -- Select size --
+                        option(value="250") 250
+                        option(value="375") 375
+                        option(value="750") 750
+                        option(value="1000") 1000
+            .row.mb-3
+                .col-md-12
+                    label(for="imageURL", class="form-label") Image URL
+                    input#imageURL.form-control(type="url", name="imageURL", placeholder="Enter image URL", required)
+            div.mb-3.d-flex.gap-2.justify-content-end
+                a.btn.btn-secondary(href="/admin") Cancel
+                button.btn.btn-primary.btn-add(type="submit") Submit
