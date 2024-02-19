@@ -44,6 +44,23 @@ To get started with this project, follow these steps:
    ```
 5. Visit http://localhost:8888 in your browser to view the application.
 
+### Sample MongoDB Data
+
+Here's a sample document from the MongoDB collection:
+
+```json
+{
+  "_id": {
+    "$oid": "65cefa03d4fc7a193246a267"
+  },
+  "name": "Tom Gore Cabernet Sauvignon",
+  "type": "Red Wine",
+  "price": "19.95",
+  "size": "750",
+  "imageURL": "https://aem.lcbo.com/content/dam/lcbo/products/4/5/1/3/451336.jpg.thumb.1280.1280.jpg"
+}
+```
+
 ### Image Credits
 
 - Wine bottle images are sourced from the LCBO website.
@@ -66,5 +83,11 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 This project is licensed under the MIT License.
 
 ```
+
 This `README.md` file provides detailed instructions on how to install, use, and contribute to the MV Wines project. It also includes information about dependencies and licensing. You can customize it further as needed for your project.
+
+```
+
+```
+
 ```
