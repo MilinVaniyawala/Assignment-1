@@ -4,6 +4,9 @@
 
 body {
   background-color: #f5f5bc;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -59,6 +62,9 @@ nav#main-menu ul li a:hover {
   color: #ffd700;
 }
 
+#main {
+  flex: 1;
+}
 /* Images Size */
 .carousel-image {
   max-height: 650px;
