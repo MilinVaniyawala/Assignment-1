@@ -87,7 +87,3 @@ This project is licensed under the MIT License.
 This `README.md` file provides detailed instructions on how to install, use, and contribute to the MV Wines project. It also includes information about dependencies and licensing. You can customize it further as needed for your project.
 
 ```
-
-```
-
-```
